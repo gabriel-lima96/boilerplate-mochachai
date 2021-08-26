@@ -60,7 +60,7 @@ suite('Unit Tests', function () {
 
   suite('Comparisons', function () {
     // #8
-    test.only('#isAbove, #isAtMost', function () {
+    test('#isAbove, #isAtMost', function () {
       assert.isAtMost('hello'.length, 5);
       assert.isAbove(1, 0);
       assert.isAbove(Math.PI, 3);
