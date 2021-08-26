@@ -148,7 +148,7 @@ suite('Unit Tests', function () {
       assert.property(myCar, 'wheels', 'Cars have wheels');
     });
     // #17
-    test.only('#typeOf, #notTypeOf', function () {
+    test('#typeOf, #notTypeOf', function () {
       assert.typeOf(myCar, 'object');
       assert.typeOf(myCar.model, 'string');
       assert.notTypeOf(airlinePlane.wings, 'string');
@@ -157,10 +157,10 @@ suite('Unit Tests', function () {
     });
     // #18
     test('#instanceOf, #notInstanceOf', function () {
-      assert.fail(myCar, Plane);
-      assert.fail(airlinePlane, Plane);
-      assert.fail(airlinePlane, Object);
-      assert.fail(myCar.wheels, String);
+      assert.notInstanceOf(myCar, Plane);
+      assert.instanceOf(airlinePlane, Plane);
+      assert.instanceOf(airlinePlane, Object);
+      assert.notInstanceOf(myCar.wheels, String);
     });
   });
 
